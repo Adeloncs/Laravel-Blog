@@ -94,7 +94,7 @@
           }else{
             this.itens.sort(function(a,b){
               if (a[ordemCol] < b[ordemCol] ) { return 1;}
-              if (a[v] > b[ordemCol] ) { return -1;}
+              if (a[ordemCol] > b[ordemCol] ) { return -1;}
               return 0;
             });
           }
