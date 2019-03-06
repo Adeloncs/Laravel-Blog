@@ -16,11 +16,17 @@ class ArtigosController extends Controller
     {
         $listaMigalhas = json_encode([
           ["titulo"=>"Home","url"=>route('home')],
-          ["titulo"=>"Lista de Compras","url"=>""]
+          ["titulo"=>"Lista de artigos","url"=>""]
+        ]);
+
+        $listaArtigos = json_encode([
+          ["id"=>1,"titulo"=>"PHP OO","descricao"=>"Curso de PHP OO"],
+          ["id"=>2,"titulo"=>"Vue JS","descricao"=>"Curso de Vue JS"]
+
         ]);
 
 
-        return view('admin.artigos.index',compact('listaMigalhas'));
+        return view('admin.artigos.index',compact('listaMigalhas','listaArtigos'));
     }
 
     /**
