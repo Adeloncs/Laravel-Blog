@@ -31,7 +31,7 @@
 
 
               <a v-if="editar && !modal" v-bind:href="editar"> Editar |</a>
-              <modallink v-if="editar && modal" v-bind:item="item" tipo="link" nome="editar" titulo=" Editar |" css=""></modallink>
+              <modallink v-if="editar && modal" v-bind:item="item" v-bind:url="editar" tipo="link" nome="editar" titulo=" Editar |" css=""></modallink>
 
               <a href="#" v-on:click="executaForm(index)"> Deletar</a>
 
@@ -41,7 +41,7 @@
               <modallink v-if="detalhe && modal" v-bind:item="item" v-bind:url="detalhe" tipo="link" nome="detalhe" titulo=" Detalhe |" css=""></modallink>
 
               <a v-if="editar && !modal" v-bind:href="editar"> Editar |</a>
-              <modallink v-if="editar && modal" tipo="link" nome="editar" titulo=" Editar |" css=""></modallink>
+              <modallink v-if="editar && modal" tipo="link" v-bind:item="item" v-bind:url="editar" nome="editar" titulo=" Editar |" css=""></modallink>
               <a v-if="deletar" v-bind:href="deletar"> Deletar</a>
             </span>
             <span v-if="token && !deletar">
@@ -49,7 +49,7 @@
               <modallink v-if="detalhe && modal" v-bind:item="item" v-bind:url="detalhe" tipo="link" nome="detalhe" titulo=" Detalhe |" css=""></modallink>
 
               <a v-if="editar && !modal" v-bind:href="editar"> Editar</a>
-              <modallink v-if="editar && modal" tipo="link" nome="editar" titulo=" Editar" css=""></modallink>
+              <modallink v-if="editar && modal" tipo="link" v-bind:item="item" v-bind:url="editar" nome="editar" titulo=" Editar" css=""></modallink>
             </span>
 
 
